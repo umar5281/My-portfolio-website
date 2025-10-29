@@ -1,22 +1,17 @@
 import { useState } from "react";
 import Button from "../components/Button";
-// import heroBg from "../assets/heroBG.jpg";
-// import aboutBg from "../assets/aboutBG.jpg";
 import umarPic from "../assets/umars.PNG";
-// import educationGB from "../assets/educationGB.jpg";
-// import projectBG from "../assets/projectBG.jpg";
 import PortfolioPic from "../assets/myp.PNG";
 import fashionPic from "../assets/fashion.PNG";
-// import servicePic from "../assets/serviceBG.jpg";
-// import footerPic from "../assets/footerBG.jpg";
-
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("home");
+  const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = (sectionId) => {
     setActiveSection(sectionId);
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+    setIsOpen(false); // close mobile menu after click
   };
 
   const navItems = [
@@ -34,10 +29,13 @@ const Portfolio = () => {
       <nav className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-primary/20 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
+            {/* Logo */}
             <h1 className="text-2xl font-bold text-primary animate-fade-in">
               Portfolio
             </h1>
-            <ul className="flex gap-6">
+
+            {/* Desktop Menu */}
+            <ul className="hidden md:flex gap-6">
               {navItems.map((item) => (
                 <li key={item}>
                   <button
@@ -53,10 +51,39 @@ const Portfolio = () => {
                 </li>
               ))}
             </ul>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden text-3xl text-primary focus:outline-none"
+            >
+              {isOpen ? "✖" : "☰"}
+            </button>
           </div>
+
+          {/* Mobile Dropdown Menu */}
+          {isOpen && (
+            <ul className="md:hidden flex flex-col items-center gap-4 mt-4 pb-4 bg-background/95 border-t border-primary/20 animate-fade-in-down">
+              {navItems.map((item) => (
+                <li key={item}>
+                  <button
+                    onClick={() => scrollToSection(item)}
+                    className={`capitalize transition-all duration-300 hover:text-primary ${
+                      activeSection === item
+                        ? "text-primary font-semibold"
+                        : "text-foreground"
+                    }`}
+                  >
+                    {item}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </nav>
 
+      
       {/* Home Section */}
       <section
         id="home"
