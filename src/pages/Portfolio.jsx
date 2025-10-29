@@ -1,14 +1,14 @@
 import { useState } from "react";
 import Button from "../components/Button";
-import heroBg from "../assets/heroBG.jpg";
-import aboutBg from "../assets/aboutBG.jpg";
+// import heroBg from "../assets/heroBG.jpg";
+// import aboutBg from "../assets/aboutBG.jpg";
 import umarPic from "../assets/umars.PNG";
-import educationGB from "../assets/educationGB.jpg";
-import projectBG from "../assets/projectBG.jpg";
+// import educationGB from "../assets/educationGB.jpg";
+// import projectBG from "../assets/projectBG.jpg";
 import PortfolioPic from "../assets/myp.PNG";
 import fashionPic from "../assets/fashion.PNG";
-import servicePic from "../assets/serviceBG.jpg";
-import footerPic from "../assets/footerBG.jpg";
+// import servicePic from "../assets/serviceBG.jpg";
+// import footerPic from "../assets/footerBG.jpg";
 
 
 const Portfolio = () => {
@@ -61,9 +61,9 @@ const Portfolio = () => {
       <section
         id="home"
         className="min-h-screen flex items-center justify-center pt-20 animate-fade-in relative bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background/90"></div>
+        
         <div className="container mx-auto px-6 text-center relative z-10">
           <h2 className="text-6xl font-bold mb-6 animate-scale-in">
             Welcome to My{" "}
@@ -88,13 +88,13 @@ const Portfolio = () => {
       <section
         id="profile"
         className="relative min-h-screen flex items-center justify-center pt-20 animate-fade-in bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${aboutBg})` }}
+        
       >
         {/* Dark transparent overlay (for opacity control) */}
-        <div className="absolute inset-0 bg-black/90"></div>
+        
 
         {/* Content (above overlay) */}
-        <div className="relative z-10 container mx-auto px-6">
+        <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12 text-primary">
             About Me
           </h2>
@@ -142,11 +142,11 @@ const Portfolio = () => {
       <section
         id="education"
         className="relative min-h-screen flex items-center justify-center pt-20 animate-fade-in bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${educationGB})` }}
+        
       >
-        <div className="absolute inset-0 bg-black/90"></div>
+        
 
-        <div className="relative z-10 container mx-auto px-6">
+        <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12 text-primary">
             Education
           </h2>
@@ -188,10 +188,9 @@ const Portfolio = () => {
       <section
         id="projects"
         className="relative min-h-screen flex items-center justify-center pt-20 animate-fade-in bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${projectBG})` }}
-      >
-        <div className="absolute inset-0 bg-black/90"></div>
-        <div className="relative z-10 container mx-auto px-6">
+             >
+        
+       <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12 text-primary">
             My Projects
           </h2>
@@ -247,11 +246,11 @@ const Portfolio = () => {
       <section
         id="services"
         className="relative min-h-screen flex items-center justify-center pt-20 animate-fade-in bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${servicePic})` }}
+        
 
       >
-        <div className="absolute inset-0 bg-black/90"></div>
-        <div className="relative z-10 container mx-auto px-6">
+        
+        <div className="container mx-auto px-6">
 
           <h2 className="text-4xl font-bold text-center mb-12 text-primary">
             Services
@@ -314,11 +313,11 @@ const Portfolio = () => {
       <section
         id="contact"
         className="relative min-h-screen flex items-center justify-center pt-20 animate-fade-in bg-cover bg-center bg-no-repeat mb-5"
-        style={{ backgroundImage: `url(${footerPic})` }}
+        
 
       >
-        <div className="absolute inset-0 bg-black/90"></div>
-        <div className="relative z-10 container mx-auto px-6">
+        
+        <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12 text-primary">
             Get In Touch
           </h2>
