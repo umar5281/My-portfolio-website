@@ -209,7 +209,7 @@ const Portfolio = () => {
                 description:
                   "A creative Front-End Web Developer turning ideas into interactive digital experiences. Focused on crafting elegant, fast, and responsive websites with React and Tailwind CSS.",
                 tech: "HTML, CSS, Javascript, React.js, Tailwind",
-                link: "https://google.com/",
+                link: "https://my-portfolio-website-bml8.vercel.app/",
                 Image: PortfolioPic
               },
             ].map((project, index) => (
